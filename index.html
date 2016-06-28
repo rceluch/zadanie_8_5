@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rock, paper, scissors - game</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		
+	</head>
+	<body>
+		<h1>Kamień - papier - nożyce</h1>
+		
+		<button class="btn btn-success" onClick=newGame()>New game</button>
+		
+		<button class="btn btn-default pick-button" onclick=playerPick('rock')>
+		    Rock <i class="fa fa-hand-rock-o" aria-hidden="true"></i>
+		</button>
+		<button class="btn btn-default pick-button" onclick="playerPick('paper')">
+		    Paper <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+		</button>
+		<button class="btn btn-default pick-button" onclick="playerPick('scissors')">
+		    Scissors <i class="fa fa-hand-scissors-o" aria-hidden="true"></i>
+		</button>
+		
+		  
+		<table class="table table-bordered table-striped">
+		  <thead>
+		    <tr>
+		      <th colspan="2" class="text-center">Game results</th>
+		    </tr>
+		    <tr>
+		      <th id="playerName">Player</th>
+		      <th>Computer</th>
+		    </tr>
+		  </thead>
+		  <tbody><tr>
+		    <td id="playerScore">0</td>
+		    <td id="computerScore">0</td>
+		  </tr></tbody>
+		</table>
+		
+		<p id="roundResult"></p>
+		
+		<div class="score">
+		  <p><h2>Current round:</h2> <br>
+		  computer chose: <span id="computerPick"></span> <br>
+		  player chose: <span id="playerPick"></span> <br>
+		  result: <span id="gameResult"></span>
+		  </p>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
